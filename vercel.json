@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/Appointment/homepage.html" },
+    { "source": "/Appointment/:path*", "destination": "/Appointment/:path*" },
+    { "source": "/:path*", "destination": "/Appointment/:path*" }
+  ]
+}
