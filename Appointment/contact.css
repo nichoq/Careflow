@@ -1,0 +1,189 @@
+/* ============================================
+   CareFlow — Contact Page Styles
+   ============================================ */
+
+.contact-page {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--space-12));
+  padding-bottom: var(--space-16);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Decorative Shapes ===== */
+.contact-bg-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+}
+
+.contact-shape-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-primary);
+  top: -150px;
+  right: -100px;
+  animation: float 10s ease-in-out infinite;
+}
+
+.contact-shape-2 {
+  width: 350px;
+  height: 350px;
+  background: var(--color-accent);
+  bottom: -80px;
+  left: -80px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.contact-shape-3 {
+  width: 200px;
+  height: 200px;
+  background: var(--color-accent-green);
+  top: 40%;
+  left: 20%;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ===== Contact Container ===== */
+.contact-container {
+  display: flex;
+  gap: var(--space-12);
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+/* ===== Contact Info ===== */
+.contact-info {
+  flex: 1;
+  max-width: 380px;
+}
+
+.contact-info h1 {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.contact-info > p {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.contact-detail-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-detail-item h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.contact-detail-item p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ===== Contact Form Card ===== */
+.contact-form-card {
+  flex: 1;
+  max-width: 500px;
+  background: var(--color-surface-solid);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border-light);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+.contact-submit-btn {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .contact-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact-details {
+    align-items: center;
+  }
+
+  .contact-detail-item {
+    text-align: left;
+  }
+
+  .contact-form-card {
+    max-width: 100%;
+    padding: var(--space-6);
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-info h1 {
+    font-size: var(--text-2xl);
+  }
+}

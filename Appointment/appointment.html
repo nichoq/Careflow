@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment — CareFlow</title>
+  <meta name="description" content="Book your doctor appointment with CareFlow. Fast, secure, and easy scheduling." />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="appointment.css" />
+</head>
+<body>
+
+  <div class="appointment-layout">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="appointment-sidebar">
+      <div class="sidebar-content">
+        <a href="homepage.html" class="sidebar-logo">
+          <img src="images/Logo.png" alt="CareFlow" />
+          <span>CareFlow</span>
+        </a>
+        <div class="doctor-profile-card">
+          <img id="doctor-img" src="" alt="Doctor" class="doctor-avatar" />
+          <h2 id="doctor-name">Dr. Name</h2>
+          <p id="doctor-specialty" class="doctor-spec">Specialty</p>
+        </div>
+        <div class="sidebar-decoration">
+          <div class="deco-circle deco-1"></div>
+          <div class="deco-circle deco-2"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== FORM AREA ===== -->
+    <main class="appointment-main">
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <div class="step-dot active" data-step="1"><span>1</span></div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="2"><span>2</span></div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="3"><span>3</span></div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="4"><span>4</span></div>
+      </div>
+
+      <form id="appointmentForm">
+        <!-- Step 1: Patient Type -->
+        <div class="step active" id="step1">
+          <div class="back-link" onclick="window.location.href='search.html'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Back to Search
+          </div>
+          <h3>Welcome! 👋</h3>
+          <p class="step-desc">To request a Virtual or Face-to-Face appointment, please select:</p>
+          <div class="patient-type-buttons">
+            <button type="button" class="patient-type-btn" onclick="nextStep()">
+              <span class="pt-icon">👤</span>
+              <span>I'm an Existing Patient</span>
+            </button>
+            <button type="button" class="patient-type-btn" onclick="nextStep()">
+              <span class="pt-icon">✨</span>
+              <span>I'm a New Patient</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Appointment Details -->
+        <div class="step" id="step2">
+          <div class="back-link" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+          </div>
+          <h3>Appointment Details</h3>
+          <p class="step-desc">Choose your preferred consultation type and schedule.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="cf-label">Request Type *</label>
+              <select class="cf-select" required>
+                <option>Clinic Visit</option>
+                <option>Virtual Consult</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Clinic</label>
+              <select class="cf-select" required>
+                <option>JLL Medical Clinic</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Preferred Date *</label>
+              <input type="date" class="cf-input" required />
+            </div>
+            <div class="form-group full-width">
+              <label class="cf-label">Reason for Booking / Chief Complaint *</label>
+              <textarea class="cf-textarea" required placeholder="Describe your symptoms or reason for visit..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="cf-btn cf-btn-primary cf-btn-lg" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Patient Details -->
+        <div class="step" id="step3">
+          <div class="back-link" onclick="prevStep()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+          </div>
+          <h3>Patient Information</h3>
+          <p class="step-desc">Please provide your details for the appointment.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="cf-label">First Name *</label>
+              <input type="text" class="cf-input" required placeholder="Enter first name" />
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Middle Name</label>
+              <input type="text" class="cf-input" placeholder="Enter middle name" />
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Last Name *</label>
+              <input type="text" class="cf-input" required placeholder="Enter last name" />
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Date of Birth *</label>
+              <input type="date" class="cf-input" required />
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Sex *</label>
+              <select class="cf-select" required>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="cf-label">Mobile Number *</label>
+              <input type="tel" class="cf-input" placeholder="e.g. 09XXXXXXXXX" required />
+            </div>
+            <div class="form-group full-width">
+              <label class="cf-label">Address *</label>
+              <input type="text" class="cf-input" required placeholder="Enter full address" />
+            </div>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms-check" required />
+            <label for="terms-check">I accept the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="cf-btn cf-btn-primary cf-btn-lg" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="step" id="step4">
+          <div class="confirmation-screen">
+            <div class="confirmation-icon-wrapper">
+              <div class="checkmark-circle">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+            <h3>Booking Complete! 🎉</h3>
+            <p>Your appointment with <strong id="appointment-doctor-name">Dr. Name</strong> has been successfully scheduled.</p>
+            <p class="confirmation-note">You will receive a confirmation email shortly with the appointment details.</p>
+            <button type="button" class="cf-btn cf-btn-primary cf-btn-lg" onclick="redirectToSearch()">Return to Search</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="appointment.js"></script>
+</body>
+</html>

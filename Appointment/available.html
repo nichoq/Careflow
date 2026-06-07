@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consult Now — CareFlow</title>
+  <meta name="description" content="Talk to a doctor now. Private online consultations starting at ₱350. Verified doctors, e-prescriptions, secure and confidential." />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="available.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="cf-navbar scrolled" id="navbar">
+    <a href="homepage.html" class="cf-navbar-logo">
+      <img src="images/Logo.png" alt="CareFlow Logo" />
+      <span>CareFlow</span>
+    </a>
+    <div class="cf-navbar-links">
+      <a href="homepage.html">Home</a>
+      <a href="search.html">Find Doctors</a>
+      <a href="contact.html">Contact</a>
+      <a href="signup.html" class="cf-btn cf-btn-primary cf-btn-sm">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="consult-hero">
+    <div class="container consult-hero-inner">
+      <div class="consult-hero-text">
+        <div class="hero-badge-green">
+          <span class="pulse-green"></span>
+          Doctors Available Now
+        </div>
+        <h1>Talk to a Doctor <span class="gradient-text-green">Now</span></h1>
+        <p>Private doctor consultation. Starts at <strong>₱350</strong>.</p>
+        <div class="consult-features">
+          <span>✅ Verified Doctors</span>
+          <span>💊 E-Prescription</span>
+          <span>🔒 Secure &amp; Confidential</span>
+        </div>
+        <a href="#doctors-online" class="cf-btn cf-btn-success cf-btn-lg">
+          Consult Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="consult-hero-image">
+        <img src="images/consult.jpg" alt="Online Consultation" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCTORS ONLINE ===== -->
+  <section id="doctors-online" class="doctors-online-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" style="color: var(--color-accent-green);">🩺 Available Now</span>
+        <h2 class="section-title">Doctors Online Now</h2>
+      </div>
+      <div class="doctors-grid">
+        <div class="consult-card">
+          <img src="images/doctor3.jpeg" alt="Dr. Shaun Murphy" class="consult-photo" />
+          <h3>Dr. Shaun Murphy</h3>
+          <p class="consult-specialty">General Surgery</p>
+          <div class="consult-card-actions">
+            <a href="DoctorProfiles/profile3.html" class="cf-btn cf-btn-ghost cf-btn-sm">View Profile</a>
+            <button onclick="bookAppointmentShaun()" class="cf-btn cf-btn-success cf-btn-sm">Consult Now – ₱500</button>
+          </div>
+        </div>
+        <div class="consult-card">
+          <img src="images/doctor1.png" alt="Dr. Gregory House" class="consult-photo" />
+          <h3>Dr. Gregory House</h3>
+          <p class="consult-specialty">Cardiologist</p>
+          <div class="consult-card-actions">
+            <a href="DoctorProfiles/profile1.html" class="cf-btn cf-btn-ghost cf-btn-sm">View Profile</a>
+            <button onclick="bookAppointmentHouse()" class="cf-btn cf-btn-success cf-btn-sm">Consult Now – ₱500</button>
+          </div>
+        </div>
+        <div class="consult-card">
+          <img src="images/doctor2.jpg" alt="Dr. Nicholas Quezon" class="consult-photo" />
+          <h3>Dr. Nicholas Quezon</h3>
+          <p class="consult-specialty">General Surgery</p>
+          <div class="consult-card-actions">
+            <a href="DoctorProfiles/profile2.html" class="cf-btn cf-btn-ghost cf-btn-sm">View Profile</a>
+            <button onclick="bookAppointmentAaron()" class="cf-btn cf-btn-success cf-btn-sm">Consult Now – ₱500</button>
+          </div>
+        </div>
+      </div>
+      <div class="view-more-wrapper">
+        <button class="cf-btn cf-btn-secondary" id="view-more-btn" onclick="showMoreDoctors()">View More Doctors</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Doctors (hidden initially) -->
+  <section class="doctors-online-section extra-doctors" id="extra-doctors-section" style="display:none;">
+    <div class="container">
+      <div class="doctors-grid">
+        <div class="consult-card">
+          <img src="images/doctor4.png" alt="Dr. Ferdinand Castro" class="consult-photo" />
+          <h3>Dr. Ferdinand Castro</h3>
+          <p class="consult-specialty">Pediatricians</p>
+          <div class="consult-card-actions">
+            <a href="DoctorProfiles/profile4.html" class="cf-btn cf-btn-ghost cf-btn-sm">View Profile</a>
+            <button onclick="bookAppointmentFerdinand()" class="cf-btn cf-btn-success cf-btn-sm">Consult Now – ₱500</button>
+          </div>
+        </div>
+        <div class="consult-card">
+          <img src="images/doctor5.png" alt="Dr. Isabella Garcia" class="consult-photo" />
+          <h3>Dr. Isabella Garcia</h3>
+          <p class="consult-specialty">Neurologist</p>
+          <div class="consult-card-actions">
+            <a href="DoctorProfiles/profile5.html" class="cf-btn cf-btn-ghost cf-btn-sm">View Profile</a>
+            <button onclick="bookAppointmentIsabella()" class="cf-btn cf-btn-success cf-btn-sm">Consult Now – ₱500</button>
+          </div>
+        </div>
+        <div class="consult-card">
+          <img src="images/doctor6.png" alt="Dr. Miguel Lopez" class="consult-photo" />
+          <h3>Dr. Miguel Lopez</h3>
+          <p class="consult-specialty">Gastroenterologist</p>
+          <div class="consult-card-actions">
+            <a href="DoctorProfiles/profile6.html" class="cf-btn cf-btn-ghost cf-btn-sm">View Profile</a>
+            <button onclick="bookAppointmentMiguel()" class="cf-btn cf-btn-success cf-btn-sm">Consult Now – ₱500</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h3>What steps do I need to follow for an online consultation?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Browse available doctors, select one, share your concern, and pay. You'll be ready for a video call in no time.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h3>What are the payment methods for online consultations?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We accept Visa/Mastercard, GCash, Maya, online banking, and more.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h3>Can I receive a prescription after an online consultation?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, digital prescriptions can be provided if necessary.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h3>Why choose online consultations with CareFlow?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Instant access to verified doctors, secure consultations, and digital prescriptions from your home.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h3>What is an online consultation?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>A video meeting with a doctor to discuss concerns and get advice without going to a clinic.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h3>How long does it take to get a response?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We aim to connect you within 15 minutes after booking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="cf-footer">
+    <div class="cf-footer-grid">
+      <div class="cf-footer-brand">
+        <div class="logo-text"><img src="images/Logo.png" alt="CareFlow" /> CareFlow</div>
+        <p>Your trusted partner in healthcare. Find verified doctors, book appointments, and receive quality medical care.</p>
+      </div>
+      <div class="cf-footer-column">
+        <h4>For Patients</h4>
+        <ul>
+          <li><a href="search.html">Find a Doctor</a></li>
+          <li><a href="#">Hospitals</a></li>
+          <li><a href="#">HMOs</a></li>
+          <li><a href="#">Specialties</a></li>
+          <li><a href="available.html">Online Consultation</a></li>
+        </ul>
+      </div>
+      <div class="cf-footer-column">
+        <h4>For Doctors</h4>
+        <ul>
+          <li><a href="#">List Your Practice</a></li>
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">Dashboard Login</a></li>
+        </ul>
+      </div>
+      <div class="cf-footer-column">
+        <h4>General</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cf-footer-bottom">
+      <p>&copy; 2025 CareFlow. All Rights Reserved.</p>
+      <div class="cf-footer-socials">
+        <a href="#">f</a><a href="#">𝕏</a><a href="#">ig</a><a href="#">in</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function bookAppointmentHouse() {
+    window.location.href = `appointment.html?doctorName=Dr.%20Gregory&specialty=General%20Physician&hospital=Philippine%20General%20Hospital&shift=Mon-Fri%2C%208AM%20-%204PM&img=images%2Fdoctor1.png`;
+  }
+  function bookAppointmentShaun() {
+    window.location.href = `appointment.html?doctorName=Dr.%20Shaun%20Murphy&specialty=General%20Surgery&hospital=Cebu%20Doctors'%20University%20Hospital&shift=Tues-Sat,%201PM%20-%209PM&img=images/doctor3.jpeg`;
+  }
+  function bookAppointmentAaron() {
+    window.location.href = `appointment.html?doctorName=Dr.%20Aaron%20Glassman&specialty=General%20Surgery&hospital=Adventist%20Medical%20Center%20Manila&shift=Tues-Sat,%201PM%20-%209PM&img=images/doctor2.jpg`;
+  }
+  function bookAppointmentFerdinand() {
+    window.location.href = `appointment.html?doctorName=Dr.%20Ferdinand%20Castro&specialty=Pediatricians&hospital=Palawan%20Adventist%20Hospital&shift=Thurs-Mon%2C%209AM%20-%205PM&img=images%2Fdoctor4.png`;
+  }
+  function bookAppointmentIsabella() {
+    window.location.href = `appointment.html?doctorName=Dr.%20Isabella%20Garcia&specialty=Neurologist&hospital=St.%20Luke%27s%20Medical%20Center%20-%20Quezon%20City&shift=Fri-Tues%2C%202PM%20-%2010PM&img=images%2Fdoctor5.png`;
+  }
+  function bookAppointmentMiguel() {
+    window.location.href = `appointment.html?doctorName=Dr.%20Miguel%20Lopez&specialty=Gastroenterologist&hospital=St.%20Luke%27s%20Medical%20Center%20-%20Global%20City&shift=Sat-Wed%2C%2011AM%20-%207PM&img=images%2Fdoctor6.png`;
+  }
+  function showMoreDoctors() {
+    document.getElementById('view-more-btn').style.display = 'none';
+    document.getElementById('extra-doctors-section').style.display = 'block';
+  }
+  function toggleFaq(item) {
+    item.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>

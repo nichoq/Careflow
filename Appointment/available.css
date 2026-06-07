@@ -1,0 +1,270 @@
+/* ============================================
+   CareFlow — Available Doctors / Consult Now
+   ============================================ */
+
+html { scroll-behavior: smooth; }
+
+/* ===== Consult Hero ===== */
+.consult-hero {
+  padding-top: calc(var(--nav-height) + var(--space-10));
+  padding-bottom: var(--space-16);
+  background: var(--color-surface-solid);
+}
+
+.consult-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.consult-hero-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.hero-badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 18px;
+  background: rgba(18, 209, 142, 0.08);
+  border: 1px solid rgba(18, 209, 142, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--color-accent-green);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+}
+
+.pulse-green {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-circle);
+  background: var(--color-accent-green);
+  animation: pulse-dot 2s infinite;
+}
+
+.consult-hero-text h1 {
+  font-size: var(--text-5xl);
+  font-weight: 900;
+  color: var(--color-primary-dark);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.gradient-text-green {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.consult-hero-text > p {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  line-height: 1.7;
+}
+
+.consult-features {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.consult-features span {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.consult-hero-image {
+  flex-shrink: 0;
+}
+
+.consult-hero-image img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ===== Doctors Online Section ===== */
+.doctors-online-section {
+  padding: var(--space-16) 0;
+  background: var(--color-bg);
+}
+
+.extra-doctors {
+  padding-top: 0;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.consult-card {
+  background: var(--color-surface-solid);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-smooth);
+}
+
+.consult-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+  border-color: rgba(18, 209, 142, 0.15);
+}
+
+.consult-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+  margin: 0 auto var(--space-4);
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.consult-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-1);
+}
+
+.consult-specialty {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.consult-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.view-more-wrapper {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+/* ===== FAQ Section ===== */
+.faq-section {
+  padding: var(--space-24) 0;
+  background: var(--color-surface-solid);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: var(--space-8) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faq-item {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  border-color: rgba(10, 110, 189, 0.15);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+}
+
+.faq-question h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.faq-toggle {
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  font-weight: 300;
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+  margin-left: var(--space-4);
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 var(--space-6);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 0 var(--space-6) var(--space-5);
+}
+
+.faq-answer p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .consult-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consult-hero-text {
+    max-width: 100%;
+  }
+
+  .consult-features {
+    justify-content: center;
+  }
+
+  .consult-hero-image img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .consult-hero-text h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

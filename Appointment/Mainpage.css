@@ -1,0 +1,90 @@
+/* ============================================
+   CareFlow — Mainpage Styles (Post-login)
+   Imports homepage styles + adds profile dropdown
+   ============================================ */
+@import url('homepage.css');
+
+/* ===== Profile Dropdown ===== */
+.profile-dropdown-container {
+  position: relative;
+  display: none;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all var(--transition-base);
+}
+
+.cf-navbar.scrolled .profile-icon {
+  border-color: var(--color-border);
+}
+
+.profile-icon:hover {
+  border-color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 200px;
+  background: var(--color-surface-solid);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border-light);
+  padding: var(--space-2);
+  display: none;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  transition: all var(--transition-base);
+  z-index: 1001;
+}
+
+.profile-dropdown-container.active .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 12px 16px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.dropdown-menu a:hover {
+  background: var(--color-bg);
+  color: var(--color-primary);
+}
+
+.dropdown-icon {
+  font-size: 16px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--color-border-light);
+  margin: var(--space-1) 0;
+}
+
+.logout-link:hover {
+  color: var(--color-error) !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* ===== Hide nav signup button by default (JS handles visibility) ===== */
+.nav-signup-btn {
+  display: none;
+}

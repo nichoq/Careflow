@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Support — CareFlow</title>
+  <meta name="description" content="Get in touch with the CareFlow team. We'll respond within 48 hours." />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="cf-navbar scrolled" id="navbar">
+    <a href="homepage.html" class="cf-navbar-logo">
+      <img src="images/Logo.png" alt="CareFlow Logo" />
+      <span>CareFlow</span>
+    </a>
+    <div class="cf-navbar-links">
+      <a href="homepage.html">Home</a>
+      <a href="search.html">Book Appointment</a>
+      <a href="contact.html">Contact</a>
+      <a href="signup.html" class="cf-btn cf-btn-primary cf-btn-sm">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <main class="contact-page">
+    <!-- Decorative shapes -->
+    <div class="contact-bg-shapes">
+      <div class="contact-shape contact-shape-1"></div>
+      <div class="contact-shape contact-shape-2"></div>
+      <div class="contact-shape contact-shape-3"></div>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <span class="section-label">Get In Touch</span>
+        <h1>Tell us about your needs</h1>
+        <p>Drop us a message and we promise to get back to you within <strong>48 hours</strong>!</p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">📧</div>
+            <div>
+              <h4>Email Us</h4>
+              <p>support@careflow.ph</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <p>+63 (2) 8888-1234</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <h4>Visit Us</h4>
+              <p>Manila, Philippines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <form action="#" method="POST" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="cf-label" for="firstName">First Name *</label>
+              <input type="text" id="firstName" class="cf-input" name="firstName" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label class="cf-label" for="lastName">Last Name *</label>
+              <input type="text" id="lastName" class="cf-input" name="lastName" required placeholder="Doe" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="cf-label" for="email">Email Address *</label>
+              <input type="email" id="email" class="cf-input" name="email" required placeholder="john@example.com" />
+            </div>
+            <div class="form-group">
+              <label class="cf-label" for="mobile">Mobile *</label>
+              <input type="text" id="mobile" class="cf-input" name="mobile" required placeholder="09XXXXXXXXX" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="cf-label" for="companyName">Company Name</label>
+            <input type="text" id="companyName" class="cf-input" name="companyName" placeholder="Optional" />
+          </div>
+          <div class="form-group">
+            <label class="cf-label" for="message">Message *</label>
+            <textarea id="message" class="cf-textarea" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+          </div>
+          <button type="submit" class="cf-btn cf-btn-primary cf-btn-lg contact-submit-btn">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

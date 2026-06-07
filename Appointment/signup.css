@@ -1,0 +1,234 @@
+/* ============================================
+   CareFlow — Sign Up / Login Page Styles
+   ============================================ */
+
+body {
+  background: var(--color-bg);
+}
+
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== Branding Panel ===== */
+.auth-brand {
+  width: 45%;
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-brand-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-12);
+  max-width: 420px;
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-16);
+}
+
+.auth-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.auth-logo span {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: #fff;
+}
+
+.auth-brand-text h1 {
+  font-size: var(--text-4xl);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+}
+
+.auth-brand-text p {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: var(--space-10);
+}
+
+.auth-brand-stats {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.auth-stat {
+  text-align: center;
+}
+
+.auth-stat-num {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: #fff;
+}
+
+.auth-stat-label {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  margin-top: var(--space-1);
+}
+
+.auth-brand-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+  background: #fff;
+}
+
+.deco-a {
+  width: 400px;
+  height: 400px;
+  bottom: -120px;
+  left: -100px;
+}
+
+.deco-b {
+  width: 250px;
+  height: 250px;
+  top: -60px;
+  right: -60px;
+}
+
+/* ===== Form Panel ===== */
+.auth-form-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  position: relative;
+}
+
+.auth-close {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  background: var(--color-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.auth-close:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.auth-form-wrapper {
+  width: 100%;
+  max-width: 420px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.auth-form-wrapper h2 {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.auth-form-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.auth-toggle span {
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.auth-toggle span:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .auth-layout {
+    flex-direction: column;
+  }
+
+  .auth-brand {
+    width: 100%;
+    padding: var(--space-10) var(--space-6);
+  }
+
+  .auth-brand-content {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .auth-brand-text h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .auth-brand-stats {
+    gap: var(--space-6);
+  }
+
+  .auth-form-panel {
+    padding: var(--space-6);
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
